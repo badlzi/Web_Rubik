@@ -1,0 +1,215 @@
+#wrapper {
+    width: 100%;
+    background: linear-gradient(#E0FFFF, #BBFFFF);
+    margin: 0 auto;
+    display: block;
+    /* Ensure it's visible by default */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info,
+.contact-form {
+    width: 48%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.contact-form .input-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-form .input-container i {
+    margin-right: 8px;
+    color: black;
+    font-size: 15px;
+}
+
+.contact-form .input-container i,
+.contact-form .input-container input {
+    margin-bottom: 5px;
+}
+
+.contact-info {
+    margin-right: 4%;
+}
+
+.contact-info div p {
+    margin-top: 10px;
+}
+
+.contact-info p,
+.contact-info div,
+.contact-form form {
+    margin-bottom: 5px;
+}
+
+.contact-info .info,
+.contact-info .hours {
+    margin-bottom: 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-form .input-container {
+    border-bottom: 2px solid black;
+    width: calc(100% - 20px);
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    outline: none;
+}
+
+.contact-form .btn-all {
+    font-size: 15px;
+    background-color: rgb(0, 119, 255);
+    border: none;
+    height: 44px;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    width: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form .btn-all:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.map iframe {
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Display settings for different devices */
+
+#wrapper, #wrapperMiniPhone, #wrapperPhone, #wrapperTablet {
+    display: none; /* Hide all by default */
+}
+
+@media (min-width: 1026px) {
+    #wrapper {
+        display: block;
+    }
+}
+
+@media (max-width: 1025px) and (min-width: 769px) {
+    #wrapperTablet {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 482px) {
+    #wrapperPhone {
+        display: block;
+    }
+}
+
+@media (max-width: 481px) {
+    #wrapperMiniPhone {
+        display: block;
+    }
+}
+
+/* Adjustments for responsive design */
+@media (max-width: 1025px) {
+    .container {
+        width: 90%;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        float: none;
+    }
+
+    .map iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        float: none;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 481px) {
+    .container {
+        width: 90%;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        float: none;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}

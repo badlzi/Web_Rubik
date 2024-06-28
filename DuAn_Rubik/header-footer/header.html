@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="stylesheet" href="heade-mobile.css"> -->
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <script>
+                window.addEventListener('scroll', function () {
+                    var menu = document.getElementById('header');
+                    if (window.scrollY > 50) {
+                        menu.classList.add('scrolled');
+                    } else {
+                        menu.classList.remove('scrolled');
+                    }
+                });
+            </script>
+            <div class="top-header">
+                <div class="address">
+                    <a href=""><i class="fa-solid fa-phone" style="margin-right: 8px;"></i>LIÊN HỆ: +84 76 888 0089</a>
+                </div>
+                <div class="login-register">
+                    <div>
+                        <a href=""><i class="fa-solid fa-door-open" style="margin-right: 8px;"></i> ĐĂNG NHẬP</a>  
+                    </div>
+                    <div>
+                          <a href=""><i class="fa-solid fa-user-plus" style="margin-right: 8px;"></i> ĐĂNG KÝ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="top-header top-header-mobile">
+                <div class="login-register">
+                    <div>
+                        <a href=""><i class="fa-solid fa-door-open"></i> ĐĂNG NHẬP</a>
+                    </div>
+                    <div>
+                        <a href=""><i class="fa-solid fa-user-plus""></i> ĐĂNG KÝ</a>
+                    </div>
+                    <!-- <div class="three-menu">
+                        <a href=""> <i class="fa-solid fa-bars"></i></a>
+                    </div> -->
+                </div>
+            </div>
+            <!-- top-mobile -->
+
+            <div class="center-header">
+                <div class="logo"><img src="img-header-footer/PKN_logo.png" alt=""> <img
+                        src="img-header-footer/thuonghieu.png" alt="">
+                </div>
+                <div id="search">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <div class="search-img"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+                <div class="contact">
+                    <div><a href=""><i class="fa-regular fa-bell"></i> <i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="center-header center-header-mobile">
+                <div class="logo"><img src="img-header-footer/PKN_logo.png" alt="">
+                </div>
+                <div class="bao">
+                    <div id="search">
+                        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </div>
+                    <div class="contact">
+                            <a href=""><i class="fa-regular fa-bell"></i></a>
+                    </div>
+                    <div class="cart">
+                        <a href="">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </div>
+                    <div class="menu-three"><a href=""> <i class="fa-solid fa-bars"></i></a></div>
+                </div>
+
+            </div>
+            <!-- centter-mobile -->
+
+           <div class="botom-header">
+                <ul class="ul1">
+                    <li class="menu1"><a href="">TRANG CHỦ</a></li>
+                    <li class="menu1"><a href="">RUBIK ĐẤU GIẢI <img src="img-header-footer/down-chevron.png"
+                                alt=""></a>
+                        <ul class="sub-menu">
+                            <li><a href="">Rubik 2x2</a></li>
+                            <li><a href="">Rubik 3x3</a></li>
+                            <li><a href="">Rubik 4x4</a></li>
+                            <li><a href="">Rubik 5x5</a></li>
+                            <li><a href="">Rubik 6x6</a></li>
+                            <li><a href="">Rubik Pyraminx</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1"><a href="">RUBIK SƯU TẦM <img src="img-header-footer/down-chevron.png" alt=""></a>
+                        <ul class="sub-menu sub-suu">
+                            <li><a href="">Rubik 8x8</a></li>
+                            <li><a href="">Rubik 9x9</a></li>
+                            <li><a href="">Rubik 10x10</a></li>
+                            <li><a href="">Rubik 11x11</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1"><a href="">PHỤ KIỆN RUBIK <img src="img-header-footer/down-chevron.png"
+                                alt=""></a>
+                        <ul class="sub-menu">
+                            <li><a href="">Dầu bôi trơn Rubik (Silicone)</a></li>
+                            <li><a href="">Giấy gián Rubik (Sticker Rubik)</a></li>
+                            <li><a href="">Thảm kê Rubik (Rubik's Stackmat)</a></li>
+                            <li><a href="">Phụ kiện khác</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu1"><a href="">TIN TỨC</a></li>
+                    <li class="menu1"><a href="">LIÊN HỆ</a></li>
+                    <li class="menu1"><a href="">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        </div>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-column logo-footer">
+                    <img src="img-header-footer/PKN_logo.png" alt="Logo" width="150">
+                </div>
+                <div class="footer-column">
+                    <h3>VỀ CHÚNG TÔI</h3>
+                    <ul>
+                        <li><a href="#">Thông tin công ty</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>THÔNG TIN</h3>
+                    <ul>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>THANH TOÁN</h3>
+                    <ul>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Trả góp</a></li>
+                        <li><a href="#">Hóa đơn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-column">
+                    <h3>CHÍNH SÁCH</h3>
+                    <ul>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách hoàn trả</a></li>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HỖ TRỢ</h3>
+                    <ul>
+                        <li><a href="#">Trung tâm hỗ trợ</a></li>
+                        <li><a href="#">Hỗ trợ trực tuyến</a></li>
+                        <li><a href="#">Liên hệ hỗ trợ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HƯỚNG DẪN CHƠI</h3>
+                    <ul>
+                        <li><a href="#">Cách tạo tài khoản</a></li>
+                        <li><a href="#">Hướng dẫn chơi</a></li>
+                        <li><a href="#">Mẹo và thủ thuật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>KẾT NỐI</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook"> </i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube"> </i> Youtube</a></li>
+                        <li><a href="#"><i class="fa-brands fa-tiktok"> </i> Tiktok</a></li>
+                        <li><a href=""><i class="fa-brands fa-xbox"> </i> Xbox</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+            <script>
+                //back to top
+                let backToTopBtn = document.getElementById("backToTopBtn");
+                window.onscroll = function () { scrollFunction() };
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        backToTopBtn.style.display = "block";
+                    } else {
+                        backToTopBtn.style.display = "none";
+                    }
+                }
+                backToTopBtn.addEventListener("click", function () {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                });
+            </script>
+        </footer>
+        <div class="end-footer">
+            <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

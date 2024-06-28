@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="../header-footer/header.css">
+    <link rel="stylesheet" href="../header-footer/footer.css">
+</head>
+
+<body>
+    <div id="header">
+        <script>
+            window.addEventListener('scroll', function () {
+                var menu = document.getElementById('header');
+                if (window.scrollY > 50) {
+                    menu.classList.add('scrolled');
+                } else {
+                    menu.classList.remove('scrolled');
+                }
+            });
+        </script>
+        <div class="top-header">
+            <div class="address">
+                <a href=""><i class="fa-solid fa-phone" style="margin-right: 8px;"></i>LIÊN HỆ: +84 76 888 0089</a>
+            </div>
+            <div class="login-register">
+                <div>
+                    <a href=""><i class="fa-solid fa-door-open" style="margin-right: 8px;"></i> ĐĂNG NHẬP</a>
+                </div>
+                <div>
+                    <a href=""><i class="fa-solid fa-user-plus" style="margin-right: 8px;"></i> ĐĂNG KÝ</a>
+                </div>
+            </div>
+        </div>
+        <div class="top-header-mobile">
+            <div class="login-register">
+                <div>
+                    <a href=""><i class="fa-solid fa-door-open"></i> ĐĂNG NHẬP</a>
+                </div>
+                <div>
+                    <a href=""><i class="fa-solid fa-user-plus"></i> ĐĂNG KÝ</a>
+                </div>
+            </div>
+        </div>
+        <!-- top-mobile -->
+
+        <div class="center-header">
+            <div class="logo">
+                <a href="../Home/index.html">
+                    <img src="../header-footer/img-header-footer/PKN_logo.png" alt="">
+                </a>
+                <img src="../header-footer/img-header-footer/thuonghieu.png" alt="">
+            </div>
+            <div id="search">
+                <input type="text" placeholder="Tìm kiếm...">
+                <div class="search-img"><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+            <div class="contact">
+                <div><a href=""><i class="fa-regular fa-bell"></i> <i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="center-header center-header-mobile">
+            <div class="logo"><img src="../header-footer/img-header-footer/PKN_logo.png" alt="">
+            </div>
+            <div class="bao">
+                <div id="search">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+                <div class="contact">
+                    <a href=""><i class="fa-regular fa-bell"></i></a>
+                </div>
+                <div class="cart">
+                    <a href="">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+                <div class="menu-three"><a href=""> <i class="fa-solid fa-bars"></i></a></div>
+            </div>
+
+        </div>
+        <!-- centter-mobile -->
+
+        <div class="botom-header">
+            <ul class="ul1">
+                <li class="menu1"><a href="../Home/index.html">TRANG CHỦ</a></li>
+                <li class="menu1"><a href="../Rubik Tournament/product-tournament.html">RUBIK ĐẤU GIẢI <img src="img-header-footer/down-chevron.png" alt=""></a>
+                    <ul class="sub-menu">
+                        <li><a href="../Rubik Tournament/produce_code/2x2.html">Rubik 2x2</a></li>
+                        <li><a href="../Rubik Tournament/produce_code/3x3.html">Rubik 3x3</a></li>
+                        <li><a href="../Rubik Tournament/produce_code/4x4.html">Rubik 4x4</a></li>
+                        <li><a href="../Rubik Tournament/produce_code/5x5.html">Rubik 5x5</a></li>
+                        <li><a href="../Rubik Tournament/produce_code/6x6.html">Rubik 6x6</a></li>
+                        <li><a href="../Rubik Tournament/produce_code/pyraminx.html">Rubik Pyraminx</a></li>
+                    </ul>
+                </li>
+                <li class="menu1"><a href="../Product/product.html">RUBIK SƯU TẦM <img
+                            src="../header-footer/img-header-footer/down-chevron.png" alt=""></a>
+                    <ul class="sub-menu sub-suu">
+                        <li><a href="../Product/produce_code/8x8.html">Rubik 8x8</a></li>
+                        <li><a href="../Product/produce_code/9x9.html">Rubik 9x9</a></li>
+                        <li><a href="../Product/produce_code/10x10.html">Rubik 10x10</a></li>
+                        <li><a href="../Product/produce_code/BThe.html">Biến thể</a></li>
+                    </ul>
+                </li>
+                <li class="menu1"><a href="../Product_accessory/product-accessory.html">PHỤ KIỆN RUBIK <img src="img-header-footer/down-chevron.png" alt=""></a>
+                    <ul class="sub-menu">
+                        <li><a href="../Product_accessory/produce_code/boitron.html">Dầu bôi trơn Rubik (Silicone)</a></li>
+                        <li><a href="../Product_accessory/produce_code/trucquay.html">Giấy gián Rubik (Sticker Rubik)</a></li>
+                        <li><a href="../Product_accessory/produce_code/tham.html">Thảm kê Rubik (Rubik's Stackmat)</a></li>
+                        <li><a href="../Product_accessory/produce_code/dongho.html">Phụ kiện khác</a></li>
+                    </ul>
+                </li>
+                <li class="menu1"><a href="../News/News.html">TIN TỨC</a></li>
+                <li class="menu1"><a href="../Contact/Contact.html">LIÊN HỆ</a></li>
+                <li class="menu1"><a href="../About/About.html">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrapper-mobile">
+        <div id="content">
+            
+            <div class="content-banner">
+                <img src="img-content/banner3.png" alt="">
+            </div>
+            <div class="title-home-star">
+                <div class="in-title">
+                    SẢN PHẨM ĐẶC TRƯNG
+                </div>
+            </div>
+            <br>
+            <div class="content-star">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/cam.webp" alt="" width="200px">
+                        <div class="title-home">
+                            SOUL STONE / 50K lượt mua
+                        </div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/do.jpg" alt="" width="200px">
+                        <div class="title-home">
+                            REALITY STONE / 37K lượt mua
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-star">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/xanhduong.webp" alt="" width="200px">
+                        <div class="title-home">
+                            SPACE STONE / 33K lượt mua
+                        </div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/xanhla.webp" alt="" width="200px">
+                        <div class="title-home">
+                            TIME STONE / 25K lượt mua\
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title-home-star">
+                SẢN PHẨM BÁN CHẠY
+            </div>
+            <br>
+            <div class="content-star-trend">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer1.webp" alt="" width="200px">
+                        <div class="title-home">Ambition</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer2.webp" alt="" width="200px">
+                        <div class="title-home">Zenith</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="content-star-trend">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer3.webp" alt="" width="200px">
+                        <div class="title-home">Chaser</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer4.webp" alt="" width="200px">
+                        <div class="title-home">Glimmer</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="title-home-star">PHỤ KIỆN</div><br>
+            <div class="content-star-accessory">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/thamrubik.png" alt="" width="200px" height="180px">
+                    </div>
+                    <div class="accessory" style="flex-direction: column;">
+                        <div class="title-home">Thảm Rubik Gen 5</div>
+                        <div class="price-hot-run">300.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/accessory2.jpg" alt="" width="200px" height="180px">
+                    </div>
+                    <div class="accessory">
+                        <div>
+                            <div class="title-home">Hộp đựng Rubik</div>
+                            <div class="price-hot-run">20.000 VNĐ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-star-accessory">
+                    <div class="star">
+                        <div class="prd-star">
+                            <img src="img-content/cfop.jpg" alt="" width="200px" height="180px">
+                        </div>
+                        <div class="accessory">
+                            <div class="title-home">Bản công thức CFOP</div>
+                            <div class="price-hot-run">40.000 VNĐ</div>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="prd-star">
+                            <img src="img-content/timer.jpg" alt="" width="200px" height="180px">
+                        </div>
+                        <div class="accessory">
+                            <div class="title-home">Timer - Đồng hồ bấm giờ</div>
+                            <div class="price-hot-run">700.000 VNĐ</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner2">
+                    <img src="img-content/bnr.png" alt="">
+                </div>
+                <div class="title-home-star">SẢN PHẨM SẮP RA MẮT</div><br>
+                <div class="product-new">
+                    <div class="product-new-img">
+                        <img src="img-content/crystal.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <div class="product-new-description">
+                        <div class="product-new-flex">
+                            <p class="title-gan">
+                                GAN356 X Cube Crystal - phiên bản đặc biệt của dòng Rubik's Cube GAN356
+                            </p>
+                            <div class="nut-chi-tiet">
+                                <input type="button" value="CHI TIẾT">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="product-new">
+                    <div class="product-new-img">
+                        <img src="img-content/vitaC.jpg" alt="" style="border-radius: 10px;">
+                    </div>
+                    <div class="product-new-description" style=" background-image: url(img-content/backvita.webp);">
+                        <div class="product-new-flex">
+                            <p class="title-gan">
+                                GAN356 XS Vita C là một phiên bản cao cấp của dòng Rubik's Cube GAN356</p>
+                            <div class="nut-chi-tiet">
+                                <input type="button" value="CHI TIẾT">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-home-star">
+                    TIN TỨC
+                </div>
+                <div class="content-star-news">
+                    <div class="star">
+                        <div class="prd-star">
+                            <img src="img-content/news1.jpg" alt="" width="200px" height="180px">
+                            <div class="title-news-home">
+                                <a target="_blank"
+                                    href="https://rubikstore.vn/huong-dan-xoay-rubik-3x3x3-theo-cach-don-gian-nhat">Hướng
+                                    dẫn
+                                    giải rubik cơ bản</a>
+                            </div>
+                            <div class="descr-news">
+                                Hướng dẫn cách xoay rubik 3x3 cực kỳ đơn giản, <br> dựa theo hướng dẫn của Leyan Lo...
+                            </div>
+                            <button>Xem chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="prd-star">
+                            <img src="img-content/new2.jpg" alt="" width="200px" height="180px">
+                            <div class="title-news-home">
+                                <a target="_blank"
+                                    href="https://www.thecubicle.com/products/gan14-m-maglev-galaxy-limited-edition-3x3">GAN
+                                    14 siêu phẩm Galaxy</a>
+                            </div>
+                            <div class="descr-news">
+                                Limited Cubes, Suspended Product <br>
+                                Home / Suspended Product / GAN14 Maglev Galaxy...
+                            </div>
+                            <button>Xem chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="prd-star">
+                            <img src="img-content/loicih.jpg" alt="" width="200px" height="180px">
+                            <div class="title-news-home">
+                                <a target="_blank"
+                                    href="https://www.avakids.com/me-va-be/choi-rubik-co-loi-ich-gi-loi-ich-khong-ngo-khi-1499662#:~:text=Rubik%20l%C3%A0%20m%E1%BB%99t%20tr%C3%B2%20ch%C6%A1i,ho%E1%BA%A1t%20c%E1%BB%A7a%20%C4%91%C3%B4i%20b%C3%A0n%20tay.">Chơi
+                                    rubik có lợi ích gì?<br></a>
+                            </div>
+                            <div class="descr-news">
+                                Trò chơi này không chỉ được các bạn nhỏ <br> yêu thích mà còn có cả người lớn...
+                            </div>
+                            <button>Xem chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="star">
+                        <div class="prd-star">
+                            <img src="img-content/lichsu.jpg" alt="" width="200px" height="180px">
+                            <div class="title-news-home">
+                                <a target="_blank"
+                                    href="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_ph%C6%B0%C6%A1ng_Rubik#:~:text=%22L%E1%BA%ADp%20ph%C6%B0%C6%A1ng%20Ma%20thu%E1%BA%ADt%22%20%C4%91%C6%B0%E1%BB%A3c,v%C3%A0%20%C4%91%C6%B0%E1%BB%A3c%20b%C3%A1n%20%E1%BB%9F%20Budapest.">Lịch
+                                    sử phát triển của Rubik</a>
+                            </div>
+                            <div class="descr-news">
+                                Lập phương Ma thuật được Ernő Rubik <br> phát minh vào năm 1974...</div>
+                            <button>Xem chi tiết</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-add-news">
+                    <button>XEM THÊM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="content">
+            <div class="content-banner"><img src="img-content/banner3.png" alt=""></div>
+            <div class="title-home-star">SẢN PHẨM ĐẶC TRƯNG</div><br>
+            <div class="content-star">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/cam.webp" alt="" width="200px">
+                        <div class="title-home">SOUL STONE / 50K lượt mua</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/do.jpg" alt="" width="200px">
+                        <div class="title-home">REALITY STONE / 37K lượt mua</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/xanhduong.webp" alt="" width="200px">
+                        <div class="title-home">SPACE STONE / 33K lượt mua</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/xanhla.webp" alt="" width="200px">
+                        <div class="title-home">TIME STONE / 25K lượt mua</div>
+                    </div>
+                </div>
+            </div>
+            <div class="title-home-star">SẢN PHẨM BÁN CHẠY</div><br>
+            <div class="content-star">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer1.webp" alt="" width="200px">
+                        <div class="title-home">Ambition</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer2.webp" alt="" width="200px">
+                        <div class="title-home">Zenith</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer3.webp" alt="" width="200px">
+                        <div class="title-home">Chaser</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/summer4.webp" alt="" width="200px">
+                        <div class="title-home">Glimmer</div>
+                        <div class="price-hot-run">2.000.000 VNĐ</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="title-home-star">PHỤ KIỆN</div><br>
+            <div class="content-star">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/thamrubik.png" alt="" width="200px" height="180px">
+                        <div class="title-home">Thảm Rubik</div>
+                        <div class="price-hot-run">300.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/accessory2.jpg" alt="" width="200px" height="180px">
+                        <div class="title-home">Hộp đựng Rubik</div>
+                        <div class="price-hot-run">20.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/cfop.jpg" alt="" width="200px" height="180px">
+                        <div class="title-home">Bản công thức CFOP</div>
+                        <div class="price-hot-run">40.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/timer.jpg" alt="" width="200px" height="180px">
+                        <div class="title-home">Timer - Đồng hồ bấm giờ</div>
+                        <div class="price-hot-run">700.000 VNĐ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner2">
+                <img src="img-content/bnr.png" alt="">
+            </div>
+
+            <div class="title-home-star">SẢN PHẨM SẮP RA MẮT</div><br>
+            <div class="product-new">
+                <div class="product-new-img">
+                    <img src="img-content/crystal.jpg" alt="" style="border-radius: 10px;">
+                </div>
+                <div class="product-new-description">
+                    <div class="product-new-flex">
+                        <div class="img-crystal-card">
+                            <img src="img-content/crystal_card.jpg" alt="" style="border-radius: 10px;">
+                        </div>
+                        <p class="title-gan">
+                            GAN356 X Cube Crystal - phiên bản đặc biệt của dòng Rubik's Cube GAN356
+                        </p>
+                        <p class="title-gan-details">
+                            Chất liệu và ngoại hình
+                        </p>
+                        <div>
+                            Được làm từ nhựa trong suốt cao cấp, mang lại vẻ ngoài sáng bóng và cảm giác cầm nắm
+                            thoải mái. <br>
+                        </div>
+                        <div>
+                            Cube có vẻ ngoài trong suốt, tạo ra hiệu ứng thị giác hấp dẫn và độc đáo, khiến nó
+                            nổi bật trong bộ sưu tập của người chơi.
+                        </div>
+                        <p class="title-gan-details">
+                            Cấu trúc bên trong
+                        </p>
+                        <div>
+                            GAN356 X Cube Crystal sử dụng hệ thống nam châm có thể thay đổi (GAN
+                            Magnet
+                            System - GMS), cho phép người chơi dễ dàng điều chỉnh lực hút của nam châm để phù hợp
+                            với
+                            phong
+                            cách chơi của mình. <br>
+                        </div>
+                        <div>
+                            Hệ thống lò xo có thể tùy chỉnh (GAN Elasticity System - GES) cho phép
+                            điều
+                            chỉnh độ căng của Cube, giúp cải thiện trải nghiệm xoay và độ linh hoạt.
+                        </div>
+                        <p class="title-gan-details">
+                            Hiệu Suất
+                        </p>
+                        <div>
+                            Được thiết kế để tối ưu hóa tốc độ và độ chính xác khi giải, với các
+                            cạnh và góc được bo tròn nhằm giảm ma sát và tăng độ mượt khi xoay. <br>
+                        </div>
+                        <div>
+                            Cấu trúc và chất liệu của Cube giúp tạo ra cảm giác xoay mượt mà và ổn
+                            định,
+                            giúp người chơi có thể thực hiện các động tác nhanh và chính xác.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="product-new">
+                <div class="product-new-img">
+                    <img src="img-content/vitaC.jpg" alt="" style="border-radius: 10px;">
+                </div>
+                <div class="product-new-description-vitac">
+                    <div class="product-new-flex">
+                        <div class="img-vitac-card">
+                            <img src="img-content/vitaC_card.jpg" alt="" style="border-radius: 10px;">
+                        </div>
+                        <p class="title-gan">
+                            GAN356 XS Vita C là một phiên bản cao cấp của dòng Rubik's Cube GAN356</p>
+                        <p class="title-gan-details">
+                            Chất liệu và ngoại hình
+                        </p>
+                        <div>
+                            Được làm từ nhựa cao cấp, mang lại độ bền cao và cảm giác cầm nắm thoải mái.<br>
+                        </div>
+                        <div>
+                            Cube có thiết kế độc đáo với màu sắc tươi sáng và bắt mắt, thường là trong suốt hoặc mờ,
+                            tạo
+                            ra hiệu ứng thị giác hấp dẫn.
+                        </div>
+                        <p class="title-gan-details">
+                            Cấu trúc bên trong
+                        </p>
+                        <div>
+                            GAN356 XS Vita C sử dụng hệ thống nam châm điều chỉnh (GAN Magnet System - GMS), cho
+                            phép
+                            người chơi dễ dàng điều chỉnh lực hút của nam châm để phù hợp với phong cách chơi của
+                            mình.<br>
+                        </div>
+                        <div>
+                            Hệ thống lò xo có thể tùy chỉnh (GAN Elasticity System - GES) giúp điều chỉnh độ căng
+                            của
+                            Cube, cải thiện trải nghiệm xoay và độ linh hoạt.
+                        </div>
+                        <div>
+                            Sử dụng core thiết kế mới giúp tăng độ ổn định và giảm trọng lượng, làm cho Cube nhẹ hơn
+                            và
+                            dễ xoay hơn.
+                        </div>
+                        <p class="title-gan-details">
+                            Hiệu Suất
+                        </p>
+                        <div>
+                            Được thiết kế để tối ưu hóa tốc độ và độ chính xác khi giải, với các
+                            cạnh và góc được bo tròn nhằm giảm ma sát và tăng độ mượt khi xoay. <br>
+                        </div>
+                        <div>
+                            Cấu trúc và chất liệu của Cube giúp tạo ra cảm giác xoay mượt mà và ổn
+                            định,
+                            giúp người chơi có thể thực hiện các động tác nhanh và chính xác.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title-home-star">TIN TỨC</div><br>
+            <div class="content-star">
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/news1.jpg" alt="" width="200px" height="180px">
+                        <div class="title-news-home">
+                            <a target="_blank"
+                                href="https://rubikstore.vn/huong-dan-xoay-rubik-3x3x3-theo-cach-don-gian-nhat">Hướng
+                                dẫn
+                                giải rubik cơ bản</a>
+                        </div>
+                        <div class="descr-news">
+                            Hướng dẫn cách xoay rubik 3x3 cực kỳ đơn giản, dựa theo hướng dẫn của Leyan Lo...
+                        </div>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/new2.jpg" alt="" width="200px" height="180px">
+                        <div class="title-news-home">
+                            <a target="_blank"
+                                href="https://www.thecubicle.com/products/gan14-m-maglev-galaxy-limited-edition-3x3">GAN
+                                14 siêu phẩm Galaxy</a>
+                        </div>
+                        <div class="descr-news">
+                            Limited Cubes, Suspended Product
+                            Home / Suspended Product / GAN14 Maglev Galaxy...
+                        </div>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/loicih.jpg" alt="" width="200px" height="180px">
+                        <div class="title-news-home">
+                            <a target="_blank"
+                                href="https://www.avakids.com/me-va-be/choi-rubik-co-loi-ich-gi-loi-ich-khong-ngo-khi-1499662#:~:text=Rubik%20l%C3%A0%20m%E1%BB%99t%20tr%C3%B2%20ch%C6%A1i,ho%E1%BA%A1t%20c%E1%BB%A7a%20%C4%91%C3%B4i%20b%C3%A0n%20tay.">Chơi
+                                rubik có lợi ích gì?<br></a>
+                        </div>
+                        <div class="descr-news">
+                            Trò chơi này không chỉ được các bạn nhỏ yêu thích mà còn có cả người lớn...
+                        </div>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </div>
+                <div class="star">
+                    <div class="prd-star">
+                        <img src="img-content/lichsu.jpg" alt="" width="200px" height="180px">
+                        <div class="title-news-home">
+                            <a target="_blank"
+                                href="https://vi.wikipedia.org/wiki/L%E1%BA%ADp_ph%C6%B0%C6%A1ng_Rubik#:~:text=%22L%E1%BA%ADp%20ph%C6%B0%C6%A1ng%20Ma%20thu%E1%BA%ADt%22%20%C4%91%C6%B0%E1%BB%A3c,v%C3%A0%20%C4%91%C6%B0%E1%BB%A3c%20b%C3%A1n%20%E1%BB%9F%20Budapest.">Lịch
+                                sử phát triển của Rubik</a>
+                        </div>
+                        <div class="descr-news">
+                            Lập phương Ma thuật được Ernő Rubik phát minh vào năm 1974...</div>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-add-news">
+                <button>XEM THÊM</button>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-column logo-footer">
+                <a href="index.html">
+                    <img src="../header-footer/img-header-footer/PKN_logo.png" alt="Logo" width="150">
+                </a>
+            </div>
+            <div class="footer-column">
+                <h3>VỀ CHÚNG TÔI</h3>
+                <ul>
+                    <li><a href="../About/About.html">Thông tin công ty</a></li>
+                    <li><a href="../News/News.html">Tin tức</a></li>
+                    <li><a href="../Contact/Contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>THÔNG TIN</h3>
+                <ul>
+                    <li><a href="../About/About.html">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>THANH TOÁN</h3>
+                <ul>
+                    <li><a href="#">Phương thức thanh toán</a></li>
+                    <li><a href="#">Trả góp</a></li>
+                    <li><a href="#">Hóa đơn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-column">
+                <h3>CHÍNH SÁCH</h3>
+                <ul>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách hoàn trả</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>HỖ TRỢ</h3>
+                <ul>
+                    <li><a href="#">Trung tâm hỗ trợ</a></li>
+                    <li><a href="#">Hỗ trợ trực tuyến</a></li>
+                    <li><a href="../Contact/Contact.html">Liên hệ hỗ trợ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>HƯỚNG DẪN CHƠI</h3>
+                <ul>
+                    <li><a href="#">Cách tạo tài khoản</a></li>
+                    <li><a href="#">Hướng dẫn chơi</a></li>
+                    <li><a href="#">Mẹo và thủ thuật</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>KẾT NỐI</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"> </i> Facebook</a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"> </i> Youtube</a></li>
+                    <li><a href="#"><i class="fa-brands fa-tiktok"> </i> Tiktok</a></li>
+                    <li><a href=""><i class="fa-brands fa-xbox"> </i> Xbox</a></li>
+                </ul>
+            </div>
+        </div>
+        <button id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+        <script>
+            //back to top
+            let backToTopBtnt = document.getElementById("backToTopBtn");
+            window.onscroll = function () { scrollFunction() };
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    backToTopBtn.style.display = "block";
+                } else {
+                    backToTopBtn.style.display = "none";
+                }
+            }
+            backToTopBtn.addEventListener("click", function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+        </script>
+    </footer>
+    <div class="end-footer">
+        <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
+    </div>
+</body>
+
+</html>
