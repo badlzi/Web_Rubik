@@ -1,0 +1,99 @@
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-container {
+    width: 350px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-container h1 {
+    margin-bottom: 0.5rem;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 92%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container p{
+    margin-top: 10px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form-container .social-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.form-container .social-buttons a {
+    display: block;
+    padding: 0.75rem;
+    margin: 0.25rem 0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.form-container .facebook {
+    background-color: #3b5998;
+}
+
+.form-container .facebook img {
+    margin-right: 4%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.form-container .google {
+    background-color: rgb(239, 129, 129);
+}
+
+.form-container .google img {
+    margin-right: 4%;
+}
+
+.form-container .login {
+    margin-top: 1rem;
+}
+
+.form-container .login a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-container .login a:hover {
+    text-decoration: underline;
+}
