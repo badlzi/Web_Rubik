@@ -1,0 +1,111 @@
+#warper{
+    width: 80%;
+    margin: 0 auto;
+}
+.info{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.info .billing-info{
+    flex-basis: 58%;
+    /* background-color: antiquewhite; */
+    height: 500px;
+    margin-left: 2%;
+
+}
+.billing-info .input-name input{
+    width: 720px;
+    height: 23px;
+    outline: none;border: none;
+    box-shadow: 0 0 3px gray;
+    margin-bottom: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.billing-info .input-address{
+    /* display: flex; */
+    /* margin: 10px; */
+    display: flex;
+     margin-right: 5px;
+    /* grid-template-columns: ; */
+}
+.input-address .input-payment{
+    flex-basis: 48%;
+    /* margin: 5%; */
+}
+.input-address .input-payment2{
+    flex-basis: 4%;
+    /* margin: 5%; */
+}
+.input-address .input-payment{
+    flex-basis: 48%;
+    /* margin: 5%; */
+}
+.input-address .input-payment input{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 3px gray;
+    width: 100%;
+    height: 25px;
+}
+.input-address .input-payment input{
+    outline: none;
+    border: none;
+    box-shadow: 0 0 3px gray;
+    width: 100%;
+    height: 23px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.input-name .star{
+    color: red;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.input-address .star{
+    color: red;
+    margin-bottom: 2px;
+    font-weight: bold; 
+}
+span{
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.input-address .input-payment select{
+    width: 100%;
+    /* margin-top: 30px; */
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 3px gray;
+}
+.info .oder-info{
+    flex-basis: 38%;
+    /* background-color: aqua; */
+    height: 500px;
+    border: 3px solid red;
+    margin-left: 2%;
+}
+.oder-info .s1{
+    width: 90%;
+    margin: 0 auto;
+}
+.oder-info td{
+    width: 87%;
+    /* padding-bottom: 20px; */
+    padding-top: 20px;
+    border-bottom: 3px solid gainsboro;
+}
+.mb-3{
+    /* 1rem = 16px */
+    margin: 0rem 1rem 1rem 1rem
+}
+.add textarea{
+    width: 100%;
+    height: 105px;
+    padding: 5px;
+    outline: none;
+}
