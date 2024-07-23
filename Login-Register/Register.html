@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../header-footer/header.css">
     <link rel="stylesheet" href="../header-footer/footer.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Ngăn form submit tự động
+            // Lấy giá trị từ các trường nhập liệu
+            const matkhau="quy"
+            const ten="123456"
+            const name = document.forms["registrationForm"]["name"].value;
+            const email = document.forms["registrationForm"]["email"].value;
+            const password = document.forms["registrationForm"]["password"].value;
+            const rePassword = document.forms["registrationForm"]["re-password"].value;
+
+            // Kiểm tra các trường đã được điền đầy đủ
+            if (name === "" || email === "" || password === "" || rePassword === "") {
+                document.getElementById('information').innerText = "Vui lòng điền đầy đủ tất cả các trường.";
+                document.getElementById('information').style.display = 'block';
+                setTimeout(() => { document.getElementById('information').style.display = 'none'; }, 2000);
+                return false;
+            }
+          
+            if (name === ten && password === matkhau && rePassword === matkhau) {
+                document.getElementById('information').innerText = "Đăng ký thành công!";
+                document.getElementById('information').style.display = 'block';
+                setTimeout(() => { document.getElementById('information').style.display = 'none'; }, 2000);
+                return false; // Ngăn form submit
+            } else {
+                document.getElementById('information').innerText = "Tên đăng nhập, mật khẩu hoặc xác nhận mật khẩu không đúng.";
+                document.getElementById('information').style.display = 'block';
+                setTimeout(() => { document.getElementById('information').style.display = 'none'; }, 2000);
+                return false; // Ngăn form submit
+            }
+
+            // Nếu tất cả đều hợp lệ, submit form
+            document.forms["registrationForm"].submit();
+
+        }
+    </script>
 </head>
 <body>
     <div id="wrapper">
@@ -129,7 +165,7 @@
         <div id="content">
             <div class="form-container">
                 <h1>Đăng ký</h1>
-                <form>
+                <form name="registrationForm" onsubmit="validateForm(event)">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Mật khẩu" required>
@@ -240,8 +276,10 @@
         </footer>
         <div class="end-footer">
             <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
-        </div>
-
+        </div>      
+    </div>
+    <div id="information">
+        
     </div>
 </body>
 </html>

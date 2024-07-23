@@ -9,10 +9,10 @@ const data = {
   },
   // Data thông tin người dùng
   userInfo: {
-    name: "",
-    email: "",
+    name: "nghi",
+    email: "nghindpc08445@gmail.com",
     address: "",
-    password: "",
+    password: "1234",
   },
   // data thông tin thanh toán
   Billing_Information: {
@@ -115,3 +115,5 @@ removeItem('billingInfo', 'price_pay');
 console.log(getData().billingInfo.price_pay); // Output: undefined (price removed)
 // Tải ban đầu (tùy chọn)
 loadDataFromLocalStorage();
+var daa = localStorage.getItem("appData");
+console.log(JSON.parse(daa).userInfo);
