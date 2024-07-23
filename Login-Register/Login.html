@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../header-footer/header.css">
     <link rel="stylesheet" href="../header-footer/footer.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JS.js"></script>
+    <style>
+        .g-signin2 {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div id="wrapper">
@@ -136,15 +144,13 @@
                 </form>
                 <p>Hoặc</p>
                 <div class="social-buttons">
-                    <a href="#" class="facebook">
-                       <img src="img_login/facebook.png" alt="">
-                        Đăng nhập bằng Facebook
-                    </a>
-                    <a href="#" class="google">
-                        <img src="img_login/google (1).png" alt="">
-                        đăng nhập bằng Google
-                    </a>
-                </div>
+                    <div class="fb-login-button"  data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                 <div id="fb-root"></div>
+                 <script async defer crossorigin="anonymous"
+                     src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v20.0&appId=27049609611304670"
+                     nonce="fpBI8xAC"></script>
+                     <div class="g-signin2" style="width: 285%; margin-top: 10px" data-onsuccess="onSignIn"></div>
+                 </div>
                 <div class="signup">
                     <a href="register.html">Đăng Ký</a>
                 </div>
@@ -242,5 +248,27 @@
             <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
         </div>
     </div>
+    
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: 27049609611304670,
+                cookie: true,
+                xfbml: true,
+                version: 'v20.0'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 </html>
