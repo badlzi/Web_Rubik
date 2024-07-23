@@ -1,4 +1,4 @@
-const data = {
+ const data = {
   // Data giỏ hàng
   cart: {
     productsName: "",
@@ -35,7 +35,7 @@ function loadDataFromLocalStorage() {
 }
 
 // Hàm lưu dữ liệu vào local storage
-function saveDataToLocalStorage() {
+ function saveDataToLocalStorage() {
   try {
     localStorage.setItem("appData", JSON.stringify(data));
   } catch (error) {
@@ -50,7 +50,7 @@ function getData() {
 }
 
 // Hàm cập nhật dữ liệu
-function updateData(newData) {
+ function updateData(newData) {
   Object.assign(data, newData);
   saveDataToLocalStorage(); // Lưu dữ liệu đã cập nhật
 }
@@ -82,7 +82,7 @@ function editItem(dataSection, key, newValue) {
 }
 
 //   Hàm xóa mục dữ liệu khỏi một phần dữ liệu
-function removeItem(dataSection, item) {
+export function removeItem(dataSection, item) {
   if (data[dataSection] && Array.isArray(data[dataSection][item])) {
     const itemIndex = data[dataSection][item].findIndex((i) => i === item);
     if (itemIndex !== -1) {
@@ -103,17 +103,17 @@ function removeItem(dataSection, item) {
   }
 }
 // ví dụ
-addItem('cart', 'items', { name: 'Product 3', price: 25 });
-console.log(getData().cart.items); // Output: [{ name: 'Product 1', price: 10 }, { name: 'Product 2', price: 15 }, { name: 'Product 3', price: 25 }]
+// addItem('cart', 'items', { name: 'Product 3', price: 25 });
+// console.log(getData().cart.items); // Output: [{ name: 'Product 1', price: 10 }, { name: 'Product 2', price: 15 }, { name: 'Product 3', price: 25 }]
 
-// Example usage - Editing user name
-editItem('userInfo', 'name', 'Jane Doe');
-console.log(getData().userInfo.name); // Output: Jane Doe
+// // Example usage - Editing user name
+// editItem('userInfo', 'name', 'Jane Doe');
+// console.log(getData().userInfo.name); // Output: Jane Doe
 
-// Example usage - Removing billing info price
-removeItem('billingInfo', 'price_pay');
-console.log(getData().billingInfo.price_pay); // Output: undefined (price removed)
-// Tải ban đầu (tùy chọn)
-loadDataFromLocalStorage();
-var daa = localStorage.getItem("appData");
-console.log(JSON.parse(daa).userInfo);
+// // Example usage - Removing billing info price
+// removeItem('billingInfo', 'price_pay');
+// console.log(getData().billingInfo.price_pay); // Output: undefined (price removed)
+// // Tải ban đầu (tùy chọn)
+// loadDataFromLocalStorage();
+// var daa = localStorage.getItem("appData");
+// console.log(JSON.parse(daa).userInfo);
