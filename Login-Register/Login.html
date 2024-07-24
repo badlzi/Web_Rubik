@@ -137,7 +137,7 @@
         <div id="content">
             <div class="login-form">
                 <h1>Đăng Nhập</h1>
-                <form>
+                <form name="registrationForm" onsubmit="validateForm(event)">
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="password" name="password" placeholder="Mật khẩu" required>
                     <button type="submit">Đăng Nhập</button>
@@ -248,7 +248,8 @@
             <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
         </div>
     </div>
-    
+    <div class="notifications"></div>
+    <script src="Login.js"></script>
     <script>
         window.fbAsyncInit = function () {
             FB.init({
