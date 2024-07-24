@@ -85,7 +85,7 @@ span{
 .info .oder-info{
     flex-basis: 38%;
     /* background-color: aqua; */
-    height: 500px;
+    min-height: 500px;
     border: 3px solid red;
     margin-left: 2%;
 }
@@ -108,4 +108,8 @@ span{
     height: 105px;
     padding: 5px;
     outline: none;
+}
+.oder-info .course_qr_img{
+    display: block;
+    width: 15rem;
 }

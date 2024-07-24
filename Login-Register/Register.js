@@ -1,9 +1,8 @@
-const userData = [];
 function validateForm(event) {
   event.preventDefault(); // Ngăn form submit tự động
   // Lấy giá trị từ các trường nhập liệu
-  const matkhau="quy"
-  const ten="123456"
+  const storedDataJSON = localStorage.getItem('userdata');
+  var userData = JSON.parse(storedDataJSON);
   let notifications = document.querySelector('.notifications');
   const names = document.forms["registrationForm"]["name"].value;
   const emails = document.forms["registrationForm"]["email"].value;
@@ -46,18 +45,28 @@ function BaoLoi(){
 //       setTimeout(() => { document.getElementById('information').style.display = 'none'; }, 2000);
 //       return false;
 //   }
-
-  if (names === ten && passwords === matkhau && rePassword === matkhau) {
-    var newUser = { name: names, email: emails, password: passwords }; 
-    userData.push(newUser);// Create new user object
-    const updatedDataJSON = JSON.stringify(userData);
-    localStorage.setItem("userdata", updatedDataJSON);
-      Thongbao();
-    //   return false; // Ngăn form submit
-  } else {
+  for(var is in userData){
+    if(names === userData[is].name || emails=== userData[is].email){
       BaoLoi();
-    //   return false; // Ngăn form submit
+      return;
+    }
+    else{
+      if (passwords === rePassword ) {
+        var newUser = { name: names, email: emails, password: passwords }; 
+        userData.push(newUser);// Create new user object
+        const updatedDataJSON = JSON.stringify(userData);
+        localStorage.setItem("userdata", updatedDataJSON);
+          Thongbao();
+          return;
+        //   return false; // Ngăn form submit
+      } else {
+          BaoLoi();
+          return;
+        //   return false; // Ngăn form submit
+      }
+    }
   }
+
   // Nếu tất cả đều hợp lệ, submit form
   document.forms["registrationForm"].submit();
 }
