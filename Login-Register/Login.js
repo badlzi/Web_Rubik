@@ -35,17 +35,36 @@ function validateForm(event) {
     createToast(type, icon, title, text);
   }
   const storedDataJSON = localStorage.getItem("userdata")
-  userData = JSON.parse(storedDataJSON)
-  for(var is in userData){
-    if(emails === userData[is].email && passwords === userData[is].password){
-      Thongbao();
-      return;
-    } else {
-      BaoLoi();
-      console.log(userData);
-      return;
-      //   return false; // Ngăn form submit
+  userData = JSON.parse(storedDataJSON) || []
+  let check = false
+  for(let is = 0 ; is<=userData?.length-1;is++){
+    console.log(userData[is].password);
+    console.log(userData[is].email);
+    if(emails == userData[is].email && passwords == userData[is].password){
+      check = true
+      break;
     }
+    // else{
+    //   if (passwords === rePassword ) {
+    //        UserData(names,emails,passwords);
+    //        console.log(UserData())
+    //        Thongbao();
+    //       return;
+    //     //   return false; // Ngăn form submit
+    //   } else {
+    //       BaoLoi();
+    //       return;
+    //     //   return false; // Ngăn form submit
+    //   }
+    // }
+  }
+
+  if(check){
+             Thongbao();
+            return;
+          //   return false; // Ngăn form submi
+  }else{
+    BaoLoi();
   }
 
 }
