@@ -136,26 +136,28 @@
 
         <div id="content">
             <div class="login-form">
-                <h1>Đăng Nhập</h1>
+                <h1>ĐĂNG NHẬP</h1>
                 <form name="registrationForm" onsubmit="validateForm(event)">
                     <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Mật khẩu" required>
+                    <div style="position: relative; width: 100%;">
+                        <input type="password" id="password" name="password" placeholder="Mật khẩu" required style="width: calc(100% - 30px);">
+                        <span id="toggle-password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                            <i class="fa-solid fa-eye-slash"></i> <!-- Biểu tượng con mắt -->
+                        </span>
+                    </div>
                     <button type="submit">Đăng Nhập</button>
                 </form>
                 <p>Hoặc</p>
                 <div class="social-buttons">
-                    <div class="fb-login-button"  data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                 <div id="fb-root"></div>
-                 <script async defer crossorigin="anonymous"
-                     src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v20.0&appId=27049609611304670"
-                     nonce="fpBI8xAC"></script>
-                     <div class="g-signin2" style="width: 285%; margin-top: 10px" data-onsuccess="onSignIn"></div>
-                 </div>
+                    <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v20.0&appId=27049609611304670" nonce="fpBI8xAC"></script>
+                    <div class="g-signin2" style="width: 600%; margin-top: 10px" data-onsuccess="onSignIn"></div>
+                </div>
                 <div class="signup">
                     <a href="register.html">Đăng Ký</a>
                 </div>
             </div>
-        
         </div>
     
 

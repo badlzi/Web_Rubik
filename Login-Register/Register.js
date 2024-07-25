@@ -1,5 +1,5 @@
 // var  newUser = { name: "quy", email: "ngocquy123@gmail.com", password: "123" }; 
-var userData = [];
+var userData ;
 // userData.push(newUser);
 // console.log(userData);
 // userData = JSON.parse(storedDataJSON);
@@ -54,12 +54,12 @@ function BaoLoi(){
     createToast(type, icon, title, text);
 }
   const storedDataJSON = localStorage.getItem("userdata")
-  userData = JSON.parse(storedDataJSON);
-  console.log(userData);
+  userData = JSON.parse(storedDataJSON)
+  console.log(userData.email);
   for(var is in userData){
-    console.log(userData[is].email);
     if(emails === userData[is].email){
       BaoLoi();
+      return;
     }
     else{
       if (passwords === rePassword ) {
@@ -79,3 +79,18 @@ function BaoLoi(){
   // Nếu tất cả đều hợp lệ, submit form
   document.forms["registrationForm"].submit();
 }
+document.querySelectorAll('.toggle-password').forEach(toggle => {
+  toggle.addEventListener('click', function () {
+    let input = this.previousElementSibling;
+    let icon = this.querySelector('i');
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.classList.remove('fa-eye-slash');
+      icon.classList.add('fa-eye');
+    } else {
+      input.type = 'password';
+      icon.classList.remove('fa-eye');
+      icon.classList.add('fa-eye-slash');
+    }
+  });
+});

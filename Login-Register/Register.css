@@ -36,7 +36,13 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
 .form-container p{
     margin-top: 10px;
 }
