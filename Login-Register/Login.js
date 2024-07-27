@@ -4,6 +4,8 @@ function validateForm(event) {
   let notifications = document.querySelector('.notifications');
   const emails = document.forms["registrationForm"]["email"].value;
   const passwords = document.forms["registrationForm"]["password"].value;
+  var audio = document.getElementById("myAudio");
+  var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   function createToast(type, icon, title, text) {
     let newToast = document.createElement('div');
     newToast.innerHTML = `
@@ -34,36 +36,47 @@ function validateForm(event) {
     let text = 'Email hoặc mật khẩu không đúng.';
     createToast(type, icon, title, text);
   }
+  function Loidetrong() {
+    let type = "warning";
+    let icon = "fa-solid fa-circle-exclamation";
+    let title = "Cảnh báo";
+    let text = "Vui lòng nhập đầy đủ thông tin";
+    createToast(type, icon, title, text);
+  }
+  function loiEmail(){
+    let type = "error";
+    let icon = "fa-solid fa-circle-exclamation";
+    let title = "Lỗi";
+    let text = "Email nhập không đúng định dạng";
+    createToast(type, icon, title, text);
+  }
   const storedDataJSON = localStorage.getItem("userdata")
   userData = JSON.parse(storedDataJSON) || []
   let check = false
-  for(let is = 0 ; is<=userData?.length-1;is++){
+  if (emails === '' || passwords === '') {
+    Loidetrong();
+    return;
+  }
+  if(!emailPattern.test(emails)){
+    loiEmail();  
+    return;
+  }
+  for (let is = 0; is <= userData?.length - 1; is++) {
     console.log(userData[is].password);
     console.log(userData[is].email);
-    if(emails == userData[is].email && passwords == userData[is].password){
+    if (emails == userData[is].email && passwords == userData[is].password) {
       check = true
       break;
     }
-    // else{
-    //   if (passwords === rePassword ) {
-    //        UserData(names,emails,passwords);
-    //        console.log(UserData())
-    //        Thongbao();
-    //       return;
-    //     //   return false; // Ngăn form submit
-    //   } else {
-    //       BaoLoi();
-    //       return;
-    //     //   return false; // Ngăn form submit
-    //   }
-    // }
+
   }
 
-  if(check){
-             Thongbao();
-            return;
-          //   return false; // Ngăn form submi
-  }else{
+  if (check) {
+    Thongbao();
+    audio.play();
+    return;
+
+  } else {
     BaoLoi();
   }
 
