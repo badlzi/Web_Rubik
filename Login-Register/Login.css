@@ -184,3 +184,13 @@ body {
             to right, #f24d4c55, #22242F 30%
         );
 }
+.toast.warning{
+    --color: #e7f24c;
+    background-image: 
+        linear-gradient(
+            to right, #81c15055, #22242F 30%
+        );
+}
+#myAudio{
+display: none;
+}
