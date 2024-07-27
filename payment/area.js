@@ -38,3 +38,18 @@ function renderCity(data) {
     }
   };
 }
+function clickradio(){
+  const bankradio = document.getElementById('bank');
+  const momoradio = document.getElementById('momo');
+  const liveradio = document.getElementById('live');
+
+  if(bankradio.checked){
+    window.location.replace("https://www.youtube.com/");
+  }
+  if(momoradio.checked){
+    window.location.replace("https://www.facebook.com/");
+  }
+  if(liveradio.checked){
+    window.location.replace("https://github.com/");
+  }
+}
