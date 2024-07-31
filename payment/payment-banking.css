@@ -94,15 +94,18 @@ span {
 }
 
 .qr-code {
-  flex-basis: 40%;
+  flex-basis: 37%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15%;
+  margin-top: 9%;
+  border: 3px solid rgb(0, 119, 255);
+  border-radius: 5px;
+  margin-left: 3%;
 }
 
 .qr-code img {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
+  width: 350px;
+  height: 350px;
+  margin-bottom: 20px;
 }
