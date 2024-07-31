@@ -1,25 +1,29 @@
+
 const data = {
   // Data giỏ hàng
   cart: {
-    productsName: "",
-    productsImg: "",
-    price: 0,
-    quantity: 0,
-    status: false,
+    items: [1,2,3,3,4],
+    total: 0,
   },
   // Data thông tin người dùng
   userInfo: {
-    name: "",
+    name: "quy",
     email: "",
     address: "",
-    password: "",
+    password: "123456",
   },
   // data thông tin thanh toán
-  Billing_Information: {
-    id_pay: "",
-    price_pay: "",
-    note_paY: "",
+  Billing_Information: [{
+    id_pay: "sdas",
+    price_pay: "ưd",
+    note_paY: "dsa",
   },
+  {
+    id_pay: "sdas",
+    price_pay: "ưd",
+    note_paY: "dsa",
+  },
+]
 };
 function loadDataFromLocalStorage() {
   const storedData = localStorage.getItem("appData");
@@ -54,7 +58,7 @@ function updateData(newData) {
   Object.assign(data, newData);
   saveDataToLocalStorage(); // Lưu dữ liệu đã cập nhật
 }
-function addItem(dataSection, item) {
+function addItem(dataSenbbction, item) {
   if (data[dataSection] && Array.isArray(data[dataSection][item])) {
     data[dataSection][item].push(item);
     saveDataToLocalStorage(); // Lưu dữ liệu đã cập nhật
@@ -72,7 +76,7 @@ function editItem(dataSection, key, newValue) {
   if (data[dataSection] && data[dataSection][key] !== undefined) {
     data[dataSection][key] = newValue;
     saveDataToLocalStorage(); // Lưu dữ liệu đã cập nhật
-    return true; // Sửa thành công
+    return true; // Sửa thành công v
   } else {
     console.error(
       `Không thể sửa mục dữ liệu: Phần dữ liệu "<span class="math-inline">\{dataSection\}" hoặc khóa "</span>{key}" không hợp lệ`
@@ -103,15 +107,21 @@ function removeItem(dataSection, item) {
   }
 }
 // ví dụ
-addItem('cart', 'items', { name: 'Product 3', price: 25 });
-console.log(getData().cart.items); // Output: [{ name: 'Product 1', price: 10 }, { name: 'Product 2', price: 15 }, { name: 'Product 3', price: 25 }]
+// addItem('cart', 'items', { name: 'Product 3', price: 25 });
+// console.log(getData().cart.items); // Output: [{ name: 'Product 1', price: 10 }, { name: 'Product 2', price: 15 }, { name: 'Product 3', price: 25 }]
 
 // Example usage - Editing user name
-editItem('userInfo', 'name', 'Jane Doe');
-console.log(getData().userInfo.name); // Output: Jane Doe
+// editItem('userInfo', 'name', 'Jane Doe');
+// console.log(getData().userInfo.name); // Output: Jane Doe
 
 // Example usage - Removing billing info price
-removeItem('billingInfo', 'price_pay');
-console.log(getData().billingInfo.price_pay); // Output: undefined (price removed)
+// removeItem('billingInfo', 'price_pay');
+// console.log(getData().billingInfo.price_pay); // Output: undefined (price removed)
 // Tải ban đầu (tùy chọn)
+saveDataToLocalStorage();
 loadDataFromLocalStorage();
+var daa = localStorage.getItem("appData");
+console.log(JSON.parse(daa).Billing_Information[1].id_pay);
+if('quy' == JSON.parse(daa).userInfo.name){
+  alert("đăng nhập thành công")
+}

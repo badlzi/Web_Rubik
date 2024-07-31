@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #info-taikhoan {
+    font-weight: bold;
+  }
+  
+  #danh-sach-san-pham {
+    margin-top: 20px;
+  }
+  
+  #san-pham-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #san-pham-list li {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #san-pham-list img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  #form-dang-nhap {
+    margin-top: 20px;
+    display: block; /* Ẩn form đăng nhập mặc định */
+  }

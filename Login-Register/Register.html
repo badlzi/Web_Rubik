@@ -13,7 +13,6 @@
 </head>
 <body>
     <div id="wrapper">
-
         <div id="header">
             <script>
                 window.addEventListener('scroll', function () {
@@ -128,30 +127,36 @@
 
         <div id="content">
             <div class="form-container">
-                <h1>Đăng ký</h1>
-                <form>
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="password" name="password" placeholder="Mật khẩu" required>
-                    <input type="password" name="re-password" placeholder="Xác nhận mật khẩu" required>
+                <h1>ĐĂNG KÝ</h1>
+                <form name="registrationForm" onsubmit="validateForm(event)">
+                    <input type="text" name="name" placeholder="Name" >
+                    <input type="text" name="email" placeholder="Email">
+                    <div style="position: relative; width: 100%;">
+                        <input type="password" id="password" name="password" placeholder="Mật khẩu"
+                            style="width: calc(100% - 30px);">
+                        <span class="toggle-password"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                            <i class="fa fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <div style="position: relative; width: 100%;">
+                        <input type="password" id="re-password" name="re-password" placeholder="Xác nhận mật khẩu"
+                            style="width: calc(100% - 30px);">
+                        <span class="toggle-password"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                            <i class="fa fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <br>
                     <button type="submit">Đăng Ký</button>
                 </form>
                 <p>Hoặc</p>
-                <div class="social-buttons">
-                    <a href="#" class="facebook">
-                        <img src="img_login/facebook.png" alt="">
-                        Đăng nhập bằng Facebook
-                    </a>
-                    <a href="#" class="google">
-                        <img src="img_login/google (1).png" alt="">
-                        Đăng nhập bằng Google
-                    </a>
-                </div>
                 <div class="login">
                     <a href="login.html">Đăng Nhập</a>
                 </div>
             </div>
         </div>
+        
 
         <footer class="footer">
             <div class="footer-top">
@@ -240,8 +245,15 @@
         </footer>
         <div class="end-footer">
             <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
-        </div>
-
+        </div>      
     </div>
+    <div id="information">
+        
+    </div>
+    <div class="notifications"></div>
+    <script src="Register.js"></script>
+    <audio id="myAudio" controls>
+        <source src="..//Audio/Tieng-chuong-nhac-nho-www_tiengdong_com.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
