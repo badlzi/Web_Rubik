@@ -1,0 +1,108 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 80%;
+}
+
+.content {
+  width: 90%;
+  display: flex;
+}
+
+.details {
+  flex-basis: 60%;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #555;
+  margin-top: 0;
+}
+
+#table-product {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#table-product th,
+#table-product td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#table-product th {
+  background-color: #f5f5f5; /* Light background for table headers */
+}
+
+.info-order {
+  margin-top: 20px;
+}
+
+.total {
+  text-align: right;
+}
+.total p {
+  text-align: left;
+  position: relative;
+  line-height: 30px;
+}
+
+span {
+  position: absolute;
+  right: 5%;
+  text-align: right;
+}
+
+.total p strong {
+  font-size: 1.2em;
+  color: red;
+}
+
+.back-button {
+  margin-top: 15px;
+}
+.back-button button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease; /* Add smooth transition on hover */
+}
+
+.back-button button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.qr-code {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.qr-code img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
