@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #all-details {
+            display: flex;
+            max-width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .img-all-details {
+            flex: 1 1 40%;
+            max-width: 40%;
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .img-details-product img {
+            width: 90%;
+            border-radius: 8px;
+        }
+
+        .infor-details {
+            flex: 1 1 60%;
+            max-width: 60%;
+            box-sizing: border-box;
+            padding: 20px;
+            position: relative;
+        }
+
+        .title-big-details {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .icon-star-details {
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .price-details {
+            background-color: #f7f7f7;
+            height: 70px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            color: #e74c3c;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-details-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-details {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .quantity-details {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .quantity-details .title-quantity-details {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .quantity-details .btn-minus,
+        .quantity-details .btn-plus {
+            border: 1px solid #ccc;
+            background-color: #fff;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .quantity-details .btn-minus:hover,
+        .quantity-details .btn-plus:hover {
+            background-color: #f7f7f7;
+        }
+
+        .quantity-details .number-quatity-details {
+            font-size: 16px;
+            margin: 0 10px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .btn-details {
+            display: flex;
+            gap: 20px;
+        }
+
+        .cart-details,
+        .buy-details {
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cart-details {
+            border: 1px solid #e67e22;
+            background-color: #fdf2e9;
+            color: #e67e22;
+        }
+
+        .cart-details:hover {
+            background-color: #e67e22;
+            color: #fff;
+        }
+
+        .buy-details {
+            background-color: #e67e22;
+            color: white;
+        }
+
+        .buy-details:hover {
+            background-color: #d35400;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #cart{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: flex;
+            background-color: #e67e22;
+            border-radius: 5px;
+            
+        }
+        #cart #cart-icon{
+            font-size: 70px;
+            display: flex;
+            
+        }
+
+        #cart #count-products{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all-details">
+        <div class="img-all-details">
+            <div class="img-details-product">
+                <img src="" alt="Rubik's Cube">
+            </div>       
+        </div>
+        <div class="infor-details">
+            <div class="title-big-details">
+                Rubik 3x3 QiYi Sail W Rubic 3 Tầng Khối Lập Phương 3x3x3 Đồ Chơi Trí Tuệ Trẻ Em Phát Triển Tư Duy - Little Kobo
+            </div>
+            <div class="icon-star-details">
+                4.9
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="price-details">
+                1.000.000 VNĐ
+            </div>
+            <div class="product-details-title">
+                Chi Tiết Sản Phẩm
+            </div>
+            <div class="product-details">
+                Rubik 3x3: Loại rubik phổ biến nhất với 6 mặt, mỗi mặt có 9 ô màu, tổng cộng 54 ô màu. Mục tiêu của trò chơi là xoay các mặt rubik để tất cả các ô màu trên cùng một mặt đều giống nhau.
+                Rubik 3x3 QiYi được làm từ nhựa ABS cao cấp, an toàn cho sức khỏe và bền bỉ theo thời gian.
+                Chất nhựa có độ nhám nhẹ giúp tạo độ bám tốt khi cầm rubik, đồng thời giúp rubik di chuyển trơn tru và mượt mà.
+            </div>
+            <div class="quantity-details">
+                <div class="title-quantity-details">
+                    Số Lượng
+                </div>
+                <div class="btn-minus" onclick="minus()">-</div>
+                <div class="number-quatity-details">1</div>
+                <div class="btn-plus" onclick="plus()">+</div>
+            </div>
+            <div class="btn-details">
+                <div class="cart-details" onclick="add()">Thêm Vào Giỏ Hàng</div>
+                <div class="buy-details" onclick="bought()">MUA NGAY</div>
+            </div>
+            <div id="cart">
+                <div id="cart-icon" onclick="cart()"><i class='bx bxs-cart-alt'></i></div>
+                <div id="count-products">0</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+    
+    
+    <script src="product-details.js">
+        
+    </script>
+</body>
+
+</html>
