@@ -40,14 +40,39 @@ function renderCity(data) {
 }
 function clickradio(){
   const bankradio = document.getElementById('bank');
-  const momoradio = document.getElementById('momo');
+  const momoradio = document.getElementById('paypal');
   const liveradio = document.getElementById('live');
 
   if(bankradio.checked){
     window.location.replace("https://www.youtube.com/");
   }
   if(momoradio.checked){
-    window.location.replace("https://www.facebook.com/");
+    console.log("đã check")
+    paypal.Buttons({
+      // ... (các tùy chọn khác)
+    }).render('#paypal-button-container').then(function(paypal) {
+      // Tạo đơn hàng
+      paypal.core.Promise.resolve(paypal.core.Promise.needs(paypal.Buttons)).then(function(buttons) {
+        buttons.createOrder({
+          purchase_units: [{
+            amount: {
+              value: '8.99'
+            }
+          }]
+        }).then(function(order) {
+          // Xử lý đơn hàng thành công
+          return buttons.actions.order.capture(order, {
+            capture_method: 'AUTHORIZE_AND_CAPTURE'
+          });
+        }).then(function(details) {
+          // Xử lý thanh toán thành công
+          console.log(details);
+        }).catch(function(error) {
+          // Xử lý lỗi
+          console.error(error);
+        });
+      });
+    });
   }
   if(liveradio.checked){
     window.location.replace("https://github.com/");
