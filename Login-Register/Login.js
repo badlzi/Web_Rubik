@@ -1,18 +1,24 @@
 var check = false;
+
+document.querySelectorAll(".toggle-password").forEach((toggle) => {
+  toggle.addEventListener("click", function () {
+    let input = this.previousElementSibling;
+    let icon = this.querySelector("i");
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    }
+  });
+});
+
 function thaydou(kt, event){
   const storedDataJSON = localStorage.getItem("userdata");
   userData = JSON.parse(storedDataJSON) || [];
-  // const emails = document.getElementById('email').value;
-  // const passwords = document.getElementById('password').value;
-  // for (let is = 0; is <= userData?.length - 1; is++) {
-  //   console.log(userData[is].password);
-  //   console.log(userData[is].email);
-  //   if (emails == userData[is].email && passwords == userData[is].password) {
-  //     var use = userData[is].name
-  //     kt = true;
-  //     break;
-  //   }
-  // }
   if(!kt){
     document.getElementById('login-register').style.display = 'none';
     document.getElementById('login-out').style.display = 'block';
@@ -96,25 +102,9 @@ function validateForm(event) {
   if (check) {
     Thongbao();
     audio.play();
-    kt = check;
     setTimeout(window.location.href = "../Home/index.html", 1000)
     return check;
   } else {
     BaoLoi();
   }
 }
-document.querySelectorAll(".toggle-password").forEach((toggle) => {
-  toggle.addEventListener("click", function () {
-    let input = this.previousElementSibling;
-    let icon = this.querySelector("i");
-    if (input.type === "password") {
-      input.type = "text";
-      icon.classList.remove("fa-eye-slash");
-      icon.classList.add("fa-eye");
-    } else {
-      input.type = "password";
-      icon.classList.remove("fa-eye");
-      icon.classList.add("fa-eye-slash");
-    }
-  });
-});
