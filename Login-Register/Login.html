@@ -137,15 +137,17 @@
         <div id="content">
             <div class="login-form">
                 <h1>ĐĂNG NHẬP</h1>
-                <form name="registrationForm" onsubmit="validateForm(event)">
-                    <input type="email" name="email" placeholder="Email">
+                <form name="registrationForm">
+                    <input type="email" id="email" name="email" placeholder="Email">
                     <div style="position: relative; width: 100%;">
-                        <input type="password" id="password" name="password" placeholder="Mật khẩu" style="width: calc(100% - 30px);">
-                        <span id="toggle-password" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
-                            <i class="fa-solid fa-eye-slash"></i> <!-- Biểu tượng con mắt -->
+                        <input type="password" id="password" name="password" placeholder="Mật khẩu"
+                            style="width: calc(100% - 30px);">
+                        <span class="toggle-password"
+                            style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;">
+                            <i class="fa fa-eye-slash"></i>
                         </span>
                     </div>
-                    <button type="submit">Đăng Nhập</button>
+                    <button onclick="validateForm(event), thaydou(kt, event)">Đăng Nhập</button>
                 </form>
                 <p>Hoặc</p>
                 <div class="social-buttons">
@@ -253,6 +255,7 @@
     <div class="notifications"></div>
     <script src="Login.js"></script>
     <script>
+        
         window.fbAsyncInit = function () {
             FB.init({
                 appId: 27049609611304670,

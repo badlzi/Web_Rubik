@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="payment.css">
+    <title>6x6</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="../header-footer/header.css">
     <link rel="stylesheet" href="../header-footer/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <script
-    src="https://www.paypal.com/sdk/js?client-id=EAV1ONi78hRtjNTSVMICrcmz8XW-Fs-rDa388xUvjhiOlF8NDqUDYjveOaQJXw_nzYuVEjRu4JxSsnkyS&currency=USD"
-    data-sdk-integration-source="button-factory"></script>  
+    <link rel="stylesheet" href="all-product.css">
+    
 </head>
-
 <body>
-    <script src="https://www.paypal.com/sdk/js?client-id=AV1ONi78hRtjNTSVMICrcmz8XW-Fs-rDa388xUvjhiOlF8NDqUDYjveOaQJXw_nzYuVEjRu4JxSsnkyS"></script>
     <div id="header">
         <script>
             window.addEventListener('scroll', function () {
@@ -127,123 +124,146 @@
             </ul>
         </div>
     </div>
-    <div id="warper">
-        <div class="info">
-            <div class="billing-info">
-                <form action="">
-                    
-                <div class="title-info">
-                    <h3 style="margin-bottom: 10px;">THÔNG TIN THANH TOÁN</h3>
-
+    <div class="wrapper">
+        <div class="layout">
+            <div class="layout-option">
+                <div class="logo-produce">
+                    <img src="../Rubik Tournament/img/img-logo/PKN_logo.png" alt="">
                 </div>
-                <div class="input-name">
-                    <span>Họ và tên</span> <span class="star">(*)</span>
-                    <input type="text" placeholder="">
+                <div class="search">
+                    <input type="text" name="" id="" placeholder=" Tìm kiếm sản phẩm" >
+                    <button>Tìm kiếm</button>
                 </div>
-                <div class="input-address">
-                    <div class="input-payment">
-                        <span>Số điện thoại</span> <span class="star">(*)</span>
-                        <input type="text" placeholder="">
-                        <br>
-                        <br>
-                        <br>
-                        <span>Tỉnh/Thành phố</span> <span class="star">(*)</span>
-                        <select name="" id="city" placeholder="Chọn Tỉnh/Thành Phố">
-                            <option value="">Chọn Tỉnh/Thành Phố</option>
-                        </select>
-                        <br>
-                        <br>
-                        <br>
-                        <span>Xã/Phường/Thị trấn</span> <span class="star">(*)</span>
-                        <select name="" id="ward" placeholder="Chọn Quận/Huyện">
-                            <option value="">Chọn Quận/Huyện</option>
-                        </select>
+                <div class="option">
+                    <div class="price">
+                        <fieldset>
+                            <legend><div class="title">GIÁ SẢN PHẨM</div></legend>
+                            <input type="radio" name="gia">Dưới 300.000 VNĐ <br>
+                            <input type="radio" name="gia">Trên 300.000 VNĐ <br>
+                            <input type="radio" name="gia">Từ 300.000 - 500.000 VNĐ <br>
+                            <input type="radio" name="gia">Từ 500.000 - 1.000.000 VNĐ <br>
+                            <input type="radio" name="gia">Từ 1.000.000 - 3.000.000 VNĐ <br>
+                            <input type="radio" name="gia">Từ 3.000.000 - 5.000.000 VNĐ <br>
+                        </fieldset>
                     </div>
-                    <div class="input-payment2">
-                        
+                    <div class="brand">
+                        <fieldset>
+                            <legend><div class="title">HÃNG SẢN XUẤT</div></legend>
+                            <input type="radio" name="brand">MoYu <br>
+                            <input type="radio" name="brand">YJ <br>
+                            <input type="radio" name="brand">DaYan <br>
+                            <input type="radio" name="brand">ShengShou <br>
+                            <input type="radio" name="brand">Yuxin <br>
+                            <input type="radio" name="brand">QiYi/MoFange <br>
+                        </fieldset>
                     </div>
-                    <div class="input-payment">
-                        <span>Địa chỉ Email</span> <span class="star">(*)</span>
-                        <input type="text" placeholder="">
-                        <br>
-                        <br>
-                        <br>
-                        <span>Quận/Huyện</span> <span class="star">(*)</span>
-                        <select name="" id="district" placeholder="Chọn Xã/Phường/Thị trấn">
-                            <option value="">Chọn Xã/Phường/Thị trấn </option>
-                        </select>
-                        <br>
-                        <br>
-                        <br>
-                        <span>Địa chỉ</span> <span class="star">(*)</span>
-                    <input type="text" placeholder="Số nhà, đường...">
+                    <div class="arrange">
+                        <fieldset>
+                            <legend><div class="title">SẮP XẾP</div></legend>
+                            <div class="arr-produce">Mới nhất</div>
+                            <div class="arr-produce">Bán chạy</div>
+                            <div class="arr-produce">Nổi bật</div>
+                        </fieldset>
                     </div>
                 </div>
-                <br>
-                <br>
-                <div class="add">
-                    <span>Ghi chú đơn hàng (tùy chọn)</span>
-                    <textarea name="" id="" placeholder="Ghi chú về đơn hàng, ví dụ: thời gian chi tiết và địa chỉ chi tiết hơn "></textarea>
-                </div>  
             </div>
-            
-                </form>
-            <div class="oder-info">
-                <br>        
-                <div class="s1">
-                    <div class="title-oder">
-                        <h3>ĐƠN HÀNG CỦA BẠN</h3>
-                        <br>
-                        <table class="tb-pay">
-                            <tr>
-                                <td>Sản phẩm</td>
-                                <td><div>Tạm tính</div></td>  
-                            </tr>
-                            <tr>
-                                <td>Tên sản phẩm</td>
-                                
-                                <td><div id="" style="color: red;"><select id="myCombobox">
-                                    <option value="" disabled selected>Danh sách tên sản phẩm</option>
-                                </select></div></td>
-                            </tr>
-                            <tr>
-                                <td>Khuyến mãi</td>
-                                <td><div style="color: red;">0</div></td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight: bold;">Tổng</td>
-                                <td><div style="color: red;">Số tiền</div></td>
-                            </tr>
-                        </table>
-                        <div class="ck">
-                             <p><input type="radio" name="bank" value="1" id="bank"> Chuyển khoản ngân hàng</p>
-                            <!-- <br> -->
-                             <p><input type="radio" name="bank" value="paypa" id="paypal"> Chuyển khoản bằng payment</p>
-                            <!-- <br> -->
-                             <p><input type="radio" name="bank" value="3" id="live"> Thanh toán khi nhận hàng</p>
+
+            <div class="layout-product">
+                <div class="choice-rubik">
+                    <ul>
+                        <li><a href="2x2.html" target="page"><img src="../Rubik Tournament/img/img-logo/2x2_1.webp" alt=""></a></li>
+                        <li><a href="3x3.html" target="page"><img src="../Rubik Tournament/img/img-logo/3x3_1.webp" alt=""></a></li>
+                        <li><a href="4x4.html" target="page"><img src="../Rubik Tournament/img/img-logo/4x4_1.webp" alt=""></a></li>
+                        <li><a href="5x5.html" target="page"><img src="../Rubik Tournament/img/img-logo/5x5_1.webp" alt=""></a></li>
+                        <li><a href="6x6.html" target="page"><img src="../Rubik Tournament/img/img-logo/6x6_1.webp" alt=""></a></li>
+                        <li><a href="pyraminx.html" target="page"><img src="../Rubik Tournament/img/img-logo/pyraminx_1.webp" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="type-rubik">
+                    <div class="title">RUBIK ĐẤU GIẢI</div>
+                    
+                </div>
+                <div class="view-produce">
+                    <div class="products">
+                        <div class="product">
+                            <div class="rubik-product" id="info1">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_1.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                    
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info2">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_2.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info3">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_3.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info4">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_4.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info5">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_5.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info6">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_2.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info7">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_3.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info8">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_4.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
+                            <div class="rubik-product" id="info9">
+                                <div class="img"><img src="../Rubik Tournament/img-produce/6x6/6x6_1.webp" alt=""></div>
+                                <div class="name-product"></div>
+                                <div class="price"></div>
+                                <div class="btn-all" onclick="details_to_info(this)">
+                                    XEM CHI TIẾT
+                                </div>
+                            </div>
                         </div>
-                        <div class="btn">
-                            <button onclick="clickradio()">ĐẶT HÀNG</button>
-                            <p >Dữ liệu cá nhân của bạn sẽ được sử dụng để sử lý đơn hàng của bạn, hổ trợ trải nghiêm của bạn trên toàn bộ trang web này và cho các mục đích khác được mô tả trong <span>chính sách riêng</span> của chúng tôi.</p>
-
-                        </div>
-                        <br>
-
-                        <!-- <div class="course_qr">
-                            <img class="course_qr_img" 
-                            src="data:image/png;base64,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" alt="">
-                            <p>Nội dung chuyển khoản <span id="paid_content">NDCK</span></p> --> 
-                            
-
-                            <!-- khi tick radio ck thì sẽ load 1 trang có mã  -->
-                            <!-- <p>Số tiền: <span id="paid_price"></span> </p> -->
-                       </div>
                     </div>
-
                 </div>
             </div>
         </div>
-
     </div>
     <footer class="footer">
         <div class="footer-top">
@@ -330,11 +350,10 @@
             });
         </script>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="area.js"></script>
     <div class="end-footer">
         <div>© Bản quyền thuộc về PKN Rubik | Cung cấp bởi PKN Store</div>
     </div>
+    <script src="database-products.js">
+    </script>
 </body>
-
 </html>

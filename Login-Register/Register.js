@@ -127,6 +127,7 @@ function validateForm(event) {
 }
 document.querySelectorAll(".toggle-password").forEach((toggle) => {
   toggle.addEventListener("click", function () {
+    console.log("ok")
     let input = this.previousElementSibling;
     let icon = this.querySelector("i");
     if (input.type === "password") {
