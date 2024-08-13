@@ -188,7 +188,102 @@ database = [{
             price: "90.000 VND",
             quantity: 1
         }
+    ],
+    data_6x6: [
+        {
+            nameProduct: "RUBIK 6X6 1",
+            price: "10.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 2",
+            price: "20.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 3",
+            price: "30.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 4",
+            price: "40.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 5",
+            price: "50.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 6",
+            price: "60.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 7",
+            price: "70.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 8",
+            price: "80.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK 6X6 9",
+            price: "90.000 VND",
+            quantity: 1
+        }
+    ],
+    data_pyraminx: [
+        {
+            nameProduct: "RUBIK PYRAMINX 1",
+            price: "10.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 2",
+            price: "20.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 3",
+            price: "30.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 4",
+            price: "40.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 5",
+            price: "50.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 6",
+            price: "60.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 7",
+            price: "70.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 8",
+            price: "80.000 VND",
+            quantity: 1
+        },
+        {
+            nameProduct: "RUBIK PYRAMINX 9",
+            price: "90.000 VND",
+            quantity: 1
+        }
     ]
+
 }]
 
 const title = document.querySelector('title').textContent //lấy tên title của web hiện tại để thực hiện if else 
@@ -202,13 +297,20 @@ for (let i = 0; i < database[0][db].length; i++) { //dùng for để đưa dữ 
 }
 
 
+const contact = document.querySelector(".fa-solid fa-cart-shopping")
+
+function cart() {
+    console.log("ok")
+    window.location.href = `http://localhost:3000/Rubik%20Tournament/cart.html`
+}
+
 function details_to_info(button) {
     const product = button.closest('.rubik-product');
     const nameproduct = product.querySelector('.name-product').textContent; //lấy tên sản phẩm
     const price = product.querySelector('.price').textContent; //lấy giá sản phẩm
     const img = product.querySelector('.img img').src; //lấy url từ src của thẻ img
 
-    window.location.href = `http://127.0.0.1:3000/Rubik%20Tournament/Product-details.html?name=${encodeURIComponent(nameproduct)}&price=${encodeURIComponent(price)}&img=${encodeURIComponent(img)}`
+    window.location.href = `http://localhost:3000/Rubik%20Tournament/Product-details.html?name=${encodeURIComponent(nameproduct)}&price=${encodeURIComponent(price)}&img=${encodeURIComponent(img)}`
 
 }
 

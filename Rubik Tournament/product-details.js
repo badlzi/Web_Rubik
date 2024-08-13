@@ -101,5 +101,5 @@ function bought() {
 
 function cart() {
     const btnCart = document.querySelector('#cart-icon')
-    window.location.href = 'http://localhost:3000/cart.html'
+    window.location.href = 'http://localhost:3000/Rubik%20Tournament/cart.html'
 }
