@@ -167,6 +167,11 @@ function searchProducts() {
     renderCartProducts()
 }
 
+function payment() {
+    var totalSum = document.querySelector('#totalSum').textContent
+    window.location.href = 'http://127.0.0.1:3000/payment/payment.html?sum=' + totalSum
+}
+
 // Initial render
 document.addEventListener('DOMContentLoaded', renderCartProducts);
 
