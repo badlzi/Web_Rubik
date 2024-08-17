@@ -26,12 +26,14 @@ function hienThiDanhSachSanPham() {
       data[i].name
     } "style = "width:50px;">
       <h3>${data[i].name}</h3></td>
-      <td><p class="gia">${data[i].price.toLocaleString("vi-VN", {
+      <td><p class="gia" style="  text-align: center;">${data[
+        i
+      ].price.toLocaleString("vi-VN", {
         style: "currency",
         currency: "VND",
       })}  VND</p></td>
-      <td><p>${data[i].quantity}</p></td>
-      <td><p>${totalProduc}  VND</p></td>
+      <td><p style="text-align: center;">${data[i].quantity}</p></td>
+      <td><p style="text-align: center;">${totalProduc}  VND</p></td>
     `;
     quantityAll += Number(data[i].quantity);
     sanPhamList.appendChild(tr);
@@ -40,9 +42,9 @@ function hienThiDanhSachSanPham() {
   let totalOrder = totalCatShopping();
   tr2.innerHTML = `
     <td><p></p></td>
-      <td colspan="2" style="display:  flex;font-weight: bold; font-size: 20px; ">Tổng: </td>
-      <td><p>${quantityAll}</p></td>
-    <td><p>${totalOrder.totalOrder}  VND</p></td>
+      <td style="display:  flex; font-weight: bold; font-size: 20px; text-align: center;">Tổng: </td>
+      <td><p style="text-align: center;">${quantityAll}</p></td>
+    <td><p style="text-align: center;">${totalOrder.totalOrder}  VND</p></td>
     `;
   sanPhamList.appendChild(tr2);
 }
