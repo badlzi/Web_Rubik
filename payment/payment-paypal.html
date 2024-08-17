@@ -155,9 +155,9 @@
                 </div>
             </div>
             <div class="paypal">
-                <p>CONG TY CP BCNTECH</p>
+                <p>Lớp SD19303</p>
                 <p>19039941292016</p>
-                <p>Số tiền: 100.000 VND</p>
+                <p id="total-orderbank">Số tiền: 100.000 VND</p>
                 <div id="paypal-button-container"></div>
             </div>
         </div>
@@ -252,31 +252,7 @@
         <h2>Danh sách sản phẩm</h2>
         <ul id="san-pham-list"></ul>
     </div> -->
-    <script>
-        paypal.Buttons({
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '8.99'
-                        }
-                    }]
-                });
-            },
-            onApprove: function (data, actions) {
-                return actions.order.capture().then(function (details) {
-                    // Xử lý khi thanh toán thành công
-                    console.log(details);
-                });
-            },
-            onError: function (err) {
-                // Xử lý khi xảy ra lỗi
-                console.error(err);
-            }
-        }).render('#paypal-button-container');
-    </script>
     <script src="payment.js"></script>
-    <script src="data.js"></script>
 </body>
 
 </html>

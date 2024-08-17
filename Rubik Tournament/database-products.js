@@ -2,94 +2,94 @@ database = [{
     data_2x2: [
         {
             nameProduct: "RUBIK 2X2 1",
-            price: "10.000 VND",
+            price: "110.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 2",
-            price: "20.000 VND",
+            price: "120.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 3",
-            price: "30.000 VND",
+            price: "130.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 4",
-            price: "40.000 VND",
+            price: "140.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 5",
-            price: "50.000 VND",
+            price: "150.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 6",
-            price: "60.000 VND",
+            price: "160.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 7",
-            price: "70.000 VND",
+            price: "170.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 8",
-            price: "80.000 VND",
+            price: "180.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 2X2 9",
-            price: "90.000 VND",
+            price: "190.000 VND",
             quantity: 1
         }
     ],
     data_3x3: [
         {
             nameProduct: "RUBIK 3X3 1",
-            price: "10.000 VND",
+            price: "110.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 2",
-            price: "20.000 VND",
+            price: "120.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 3",
-            price: "30.000 VND",
+            price: "130.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 4",
-            price: "40.000 VND",
+            price: "140.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 5",
-            price: "50.000 VND",
+            price: "150.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 6",
-            price: "60.000 VND",
+            price: "160.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 7",
-            price: "70.000 VND",
+            price: "170.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 8",
-            price: "80.000 VND",
+            price: "180.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 3X3 9",
-            price: "90.000 VND",
+            price: "190.000 VND",
             quantity: 1
         }
     ],
@@ -97,47 +97,47 @@ database = [{
     data_4x4: [
         {
             nameProduct: "RUBIK 4X4 1",
-            price: "10.000 VND",
+            price: "110.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 2",
-            price: "20.000 VND",
+            price: "120.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 3",
-            price: "30.000 VND",
+            price: "130.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 4",
-            price: "40.000 VND",
+            price: "140.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 5",
-            price: "50.000 VND",
+            price: "150.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 6",
-            price: "60.000 VND",
+            price: "160.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 7",
-            price: "70.000 VND",
+            price: "170.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 8",
-            price: "80.000 VND",
+            price: "180.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 4X4 9",
-            price: "90.000 VND",
+            price: "190.000 VND",
             quantity: 1
         }
     ],
@@ -145,141 +145,141 @@ database = [{
     data_5x5: [
         {
             nameProduct: "RUBIK 5X5 1",
-            price: "10.000 VND",
+            price: "110.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 2",
-            price: "20.000 VND",
+            price: "120.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 3",
-            price: "30.000 VND",
+            price: "130.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 4",
-            price: "40.000 VND",
+            price: "140.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 5",
-            price: "50.000 VND",
+            price: "150.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 6",
-            price: "60.000 VND",
+            price: "160.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 7",
-            price: "70.000 VND",
+            price: "170.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 8",
-            price: "80.000 VND",
+            price: "180.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 5X5 9",
-            price: "90.000 VND",
+            price: "190.000 VND",
             quantity: 1
         }
     ],
     data_6x6: [
         {
             nameProduct: "RUBIK 6X6 1",
-            price: "10.000 VND",
+            price: "110.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 2",
-            price: "20.000 VND",
+            price: "120.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 3",
-            price: "30.000 VND",
+            price: "130.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 4",
-            price: "40.000 VND",
+            price: "140.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 5",
-            price: "50.000 VND",
+            price: "150.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 6",
-            price: "60.000 VND",
+            price: "160.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 7",
-            price: "70.000 VND",
+            price: "170.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 8",
-            price: "80.000 VND",
+            price: "180.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK 6X6 9",
-            price: "90.000 VND",
+            price: "190.000 VND",
             quantity: 1
         }
     ],
     data_pyraminx: [
         {
             nameProduct: "RUBIK PYRAMINX 1",
-            price: "10.000 VND",
+            price: "110.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 2",
-            price: "20.000 VND",
+            price: "120.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 3",
-            price: "30.000 VND",
+            price: "130.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 4",
-            price: "40.000 VND",
+            price: "140.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 5",
-            price: "50.000 VND",
+            price: "150.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 6",
-            price: "60.000 VND",
+            price: "160.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 7",
-            price: "70.000 VND",
+            price: "170.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 8",
-            price: "80.000 VND",
+            price: "180.000 VND",
             quantity: 1
         },
         {
             nameProduct: "RUBIK PYRAMINX 9",
-            price: "90.000 VND",
+            price: "190.000 VND",
             quantity: 1
         }
     ]
