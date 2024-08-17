@@ -1,47 +1,12 @@
-const sanPhamDuLieu = [
-  {
-    id: 1,
-    ten: "Áo thun nam",
-    gia: 200000,
-    soLuong: 10,
-    hinhAnh:
-      "https://cdn.tgdd.vn/Products/Images/1164/128342/sim-4g-viettel-vsim-happy-tri-hieu-10-nam-mien-phi-goi-noi-mang-viettel-10gb-thang-mua-sim-nhan-ngay-qua-tang-cuc-dep-1.jpg",
-    moTa: "Áo thun nam tay ngắn cổ tròn basic cotton co giãn 4 chiều mềm mại mịn màng thoáng mát thấm hút mồ hôi tốt form ôm vừa vặn tôn dáng phù hợp mọi hoạt động",
-  },
-  {
-    id: 2,
-    ten: "Áo thun nam",
-    gia: 200000,
-    soLuong: 10,
-    hinhAnh:
-      "https://cdn.tgdd.vn/Products/Images/1164/128342/sim-4g-viettel-vsim-happy-tri-hieu-10-nam-mien-phi-goi-noi-mang-viettel-10gb-thang-mua-sim-nhan-ngay-qua-tang-cuc-dep-1.jpg",
-    moTa: "Áo thun nam tay ngắn cổ tròn basic cotton co giãn 4 chiều mềm mại mịn màng thoáng mát thấm hút mồ hôi tốt form ôm vừa vặn tôn dáng phù hợp mọi hoạt động",
-  },
-  {
-    id: 3,
-    ten: "Áo thun nam",
-    gia: 200000,
-    soLuong: 10,
-    hinhAnh:
-      "https://cdn.tgdd.vn/Products/Images/1164/128342/sim-4g-viettel-vsim-happy-tri-hieu-10-nam-mien-phi-goi-noi-mang-viettel-10gb-thang-mua-sim-nhan-ngay-qua-tang-cuc-dep-1.jpg",
-    moTa: "Áo thun nam tay ngắn cổ tròn basic cotton co giãn 4 chiều mềm mại mịn màng thoáng mát thấm hút mồ hôi tốt form ôm vừa vặn tôn dáng phù hợp mọi hoạt động",
-  },
-  // ... (Cập nhật dữ liệu 10 sản phẩm của bạn)
-  // ... (Cập nhật dữ liệu 10 sản phẩm của bạn)
-];
-
-// Khởi tạo biến
 let taiKhoanDangNhap = null;
 const sanPhamList = document.getElementById("table-product");
 const infoTaiKhoan = document.getElementById("info-taikhoan");
 const loginForm = document.getElementById("loginForm");
 
-// Hàm khởi tạo
 function khoiTao() {
   hienThiDanhSachSanPham();
 }
 
-// Hàm hiển thị thông tin tài khoản
 function hienThiThongTinTaiKhoan() {
   if (taiKhoanDangNhap) {
     infoTaiKhoan.textContent = `Xin chào, ${taiKhoanDangNhap.username}`;
@@ -50,53 +15,55 @@ function hienThiThongTinTaiKhoan() {
   }
 }
 
-// Hàm hiển thị danh sách sản phẩm
 function hienThiDanhSachSanPham() {
-  //   sanPhamList.innerHTML = ""; // Xóa danh sách cũ trước khi hiển thị mới
-
-  sanPhamDuLieu.forEach((sanPham) => {
+  const data = JSON.parse(localStorage.getItem("selectCartProduct"));
+  let quantityAll = 0;
+  for (let i = 0; i < data.length; i++) {
     const tr = document.createElement("tr");
+    let totalProduc = data[i].price * data[i].quantity;
     tr.innerHTML = `
-      <td style="display: flex;"><img src="${sanPham.hinhAnh}" alt="${
-      sanPham.ten
+      <td style="display: flex;"><img src="${data[i].img}" alt="${
+      data[i].name
     } "style = "width:50px;">
-      <h3>${sanPham.ten}</h3></td>
-      <td><p>${sanPham.soLuong}</p></td>
-      <td><p class="gia">${sanPham.gia.toLocaleString("vi-VN", {
+      <h3>${data[i].name}</h3></td>
+      <td><p class="gia" style="  text-align: center;">${data[
+        i
+      ].price.toLocaleString("vi-VN", {
         style: "currency",
         currency: "VND",
-      })}</p></td>
+      })}  VND</p></td>
+      <td><p style="text-align: center;">${data[i].quantity}</p></td>
+      <td><p style="text-align: center;">${totalProduc}  VND</p></td>
     `;
-
+    quantityAll += Number(data[i].quantity);
     sanPhamList.appendChild(tr);
-  });
+  }
+  const tr2 = document.createElement("tr");
+  let totalOrder = totalCatShopping();
+  tr2.innerHTML = `
+    <td><p></p></td>
+      <td style="display:  flex; font-weight: bold; font-size: 20px; text-align: center;">Tổng: </td>
+      <td><p style="text-align: center;">${quantityAll}</p></td>
+    <td><p style="text-align: center;">${totalOrder.totalOrder}  VND</p></td>
+    `;
+  sanPhamList.appendChild(tr2);
 }
 function totalCatShopping() {
   let totalCatShopping = 0;
-  let totalproducts = 0;
-  sanPhamDuLieu.forEach((sanpham) => {
-    totalproducts = sanpham.gia * sanpham.soLuong;
-    totalCatShopping += totalproducts;
-  });
-  document.getElementById("total").textContent = totalCatShopping;
+  let totalOrder = 0;
+  let sales = 0;
+  const data = JSON.parse(localStorage.getItem("selectCartProduct"));
+  for (let i = 0; i < data.length; i++) {
+    totalCatShopping += data[i].price * data[i].quantity;
+  }
+  totalOrder = totalCatShopping - sales;
+  document.getElementById("total").textContent = totalCatShopping + "\t VND";
+  document.getElementById("voucher").textContent = sales + "\t VND";
+  document.getElementById("total-order").textContent = totalOrder + "\t VND";
+  return {
+    totalOrder: totalOrder,
+  };
 }
 
-function totalOrder() {}
-// Hàm xử lý đăng nhập
-// loginForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   const username = document.getElementById("username").value;
-//   const password = document.getElementById("password").value;
-
-//   if (username === "admin" && password === "123456") {
-//     localStorage.setItem("taiKhoanDangNhap", JSON.stringify({ username }));
-//     khoiTao(); // Cập nhật thông tin sau khi đăng nhập
-//   } else {
-//     alert("Đăng nhập thất bại!");
-//   }
-// });
-
-// Khởi tạo ứng dụng
 khoiTao();
 totalCatShopping();
