@@ -94,14 +94,14 @@ span {
 }
 
 .qr-code {
-  flex-basis: 37%;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 9%;
+  margin-top: 1.5%;
   border: 3px solid rgb(0, 119, 255);
   border-radius: 5px;
-  margin-left: 3%;
+  margin-left: 5%;
 }
 
 .qr-code img {

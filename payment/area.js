@@ -19,7 +19,7 @@ function renderCity(data) {
     district.length = 1;
     ward.length = 1;
     if (this.value != "") {
-      const result = data.filter(n => n.Id === this.value);
+      const result = data.filter((n) => n.Id === this.value);
 
       for (const k of result[0].Districts) {
         district.options[district.options.length] = new Option(k.Name, k.Id);
@@ -30,7 +30,9 @@ function renderCity(data) {
     ward.length = 1;
     const dataCity = data.filter((n) => n.Id === citis.value);
     if (this.value != "") {
-      const dataWards = dataCity[0].Districts.filter(n => n.Id === this.value)[0].Wards;
+      const dataWards = dataCity[0].Districts.filter(
+        (n) => n.Id === this.value
+      )[0].Wards;
 
       for (const w of dataWards) {
         wards.options[wards.options.length] = new Option(w.Name, w.Id);
@@ -38,11 +40,10 @@ function renderCity(data) {
     }
   };
 }
+var bankradio = document.getElementById("bank");
+var momoradio = document.getElementById("paypal");
+var liveradio = document.getElementById("live");
 function clickradio() {
-  const bankradio = document.getElementById('bank');
-  const momoradio = document.getElementById('paypal');
-  const liveradio = document.getElementById('live');
-
   if (bankradio.checked) {
     window.location.replace("payment-banking.html");
   }
@@ -55,13 +56,12 @@ function clickradio() {
 }
 
 function setComboboxData() {
-
-  const data = JSON.parse(localStorage.getItem('cart'));
-  const combobox = document.getElementById('myCombobox');
+  const data = JSON.parse(localStorage.getItem("cart"));
+  const combobox = document.getElementById("myCombobox");
   for (let i = 0; i < data.length; i++) {
-    const option = document.createElement('option');
-    option.textContent = data[i].name
-    combobox.appendChild(option)
+    const option = document.createElement("option");
+    option.textContent = data[i].name;
+    combobox.appendChild(option);
   }
 }
 setComboboxData();
