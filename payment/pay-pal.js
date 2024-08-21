@@ -55,7 +55,7 @@ async function totalCatShopping() {
   let totalOrder = 0;
   let sales = 0;
   const data = JSON.parse(localStorage.getItem("selectCartProduct"));
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 0; i < data?.length; i++) {
     totalCatShopping += data[i].price * data[i].quantity;
   }
   totalOrder = totalCatShopping - sales;
@@ -114,31 +114,31 @@ async function checkPaid(price, content) {
   }
 }
 
-// paypal
-//   .Buttons({
-//     createOrder: function (data, actions) {
-//       return actions.order.create({
-//         purchase_units: [
-//           {
-//             amount: {
-//               value: "100",
-//             },
-//           },
-//         ],
-//       });
-//     },
-//     onApprove: function (data, actions) {
-//       return actions.order.capture().then(function (details) {
-//         // Xử lý khi thanh toán thành công
-//         console.log(details);
-//       });
-//     },
-//     onError: function (err) {
-//       // Xử lý khi xảy ra lỗi
-//       console.error(err);
-//     },
-//   })
-//   .render("#paypal-button-container");
+paypal
+  .Buttons({
+    createOrder: function (data, actions) {
+      return actions.order.create({
+        purchase_units: [
+          {
+            amount: {
+              value: "100",
+            },
+          },
+        ],
+      });
+    },
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function (details) {
+        // Xử lý khi thanh toán thành công
+        console.log(details);
+      });
+    },
+    onError: function (err) {
+      // Xử lý khi xảy ra lỗi
+      console.error(err);
+    },
+  })
+  .render("#paypal-button-container");
 
 // Hiển thị URL ra console
 
